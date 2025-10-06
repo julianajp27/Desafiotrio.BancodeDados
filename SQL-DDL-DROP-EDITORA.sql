@@ -1,0 +1,38 @@
+-- DROP COMPLETO DO BANCO EDITORA
+
+
+-- 1) DROPAR AS VIEWS 
+DROP VIEW IF EXISTS vw_pedidos_detalhe;
+DROP VIEW IF EXISTS vw_itens_pedido_valor;
+DROP VIEW IF EXISTS vw_pedido_total;
+DROP VIEW IF EXISTS vw_clientes_gasto;
+DROP VIEW IF EXISTS vw_ticket_medio_cliente;
+DROP VIEW IF EXISTS vw_pedidos_itens_concat;
+DROP VIEW IF EXISTS vw_clientes_acima_media;
+DROP VIEW IF EXISTS vw_funcionarios_valor_vendido;
+DROP VIEW IF EXISTS vw_livros_qtd_vendida;
+DROP VIEW IF EXISTS vw_vendas_mensal;
+
+-- 2) DROPAR AS TABELAS MAIS DEPENDENTES PRIMEIRO
+DROP TABLE IF EXISTS item_pedido;
+DROP TABLE IF EXISTS exemplar;
+DROP TABLE IF EXISTS livro_autor;
+DROP TABLE IF EXISTS livro_area;
+DROP TABLE IF EXISTS livro_palavra;
+
+-- 3) DROPAR AS TABELAS RELACIONADAS A PROCESSOS
+DROP TABLE IF EXISTS pedido;
+
+-- 4) DROPAR AS TABELAS DE ENTIDADES SECUNDÁRIAS
+DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS funcionario;
+
+-- 5) DROPAR AS TABELAS PRINCIPAIS
+DROP TABLE IF EXISTS livro;
+DROP TABLE IF EXISTS autor;
+DROP TABLE IF EXISTS area_conhecimento;
+DROP TABLE IF EXISTS palavras_chave;
+DROP TABLE IF EXISTS departamento;
+
+
+DROP DATABASE IF EXISTS editora;
